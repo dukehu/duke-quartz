@@ -1,2 +1,2 @@
 # duke-quartz
-任务调度应用
+定时任务（quartz）项目服务

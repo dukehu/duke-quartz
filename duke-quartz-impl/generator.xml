@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <context id="MyBatis3Simple" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost/duke_quartz?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false"
+                        userId="root" password="duke" />
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.duke.microservice.quartz.domain.basic" targetProject="MAVEN"/>
+        <sqlMapGenerator targetPackage="mapper/basic" targetProject="MAVEN"/>
+        <javaClientGenerator  type="XMLMAPPER" targetPackage="com.duke.microservice.quartz.mapper.basic" targetProject="MAVEN"/>
+
+        <!--<table domainObjectName="BlogArticle" tableName="blog_article"/>-->
+    </context>
+</generatorConfiguration>
